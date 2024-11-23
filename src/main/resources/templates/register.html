@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+<div class="container">
+    <div th:insert="~{header :: header}"></div>
+         <div class="content fontText sizeText ">
+            <div class="all">
+                <div class="title">
+                    <div class="fontBold sizeText">Register Form</div>
+                </div>
+                <div class="res">
+                    <!-- Hiển thị lỗi -->
+                    <div class="mess" th:if="${mess}"  th:text="${mess}"></div>
+
+                    <form action="register" method="POST">
+                        <table>
+                            <tr>
+                                <td class="colorText">New User Name:</td>
+                                <td><label>
+                                    <input type="text" name="newUsername" value=""/>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td class="colorText">Password:</td>
+                                <td><label>
+                                    <input type="password" name="newPass" value=""/>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td class="colorText">Confirm Password:</td>
+                                <td><label>
+                                    <input type="password" name="confPass" value=""/>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>User Role: </td>
+                                <td>
+                                    <label>
+                                        <select name="role">
+                                            <option value="" selected hidden>Select Role</option>
+                                            <option value="teacher" >TEACHER</option>
+                                            <option value="student" >STUDENT</option>
+                                        </select>
+                                    </label>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><label>
+                                    <input type="text" name="email" value=""/>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input class="buttonSubmit sizeText" type="submit" name="submit" value="Register"/>
+                                    <a class="linkRegister colorText" href="login">Login</a></td>
+                            </tr>
+                        </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

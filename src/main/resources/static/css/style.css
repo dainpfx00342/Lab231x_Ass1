@@ -1,0 +1,58 @@
+body {
+    background-image: url("/images/bg.jpg");
+
+}
+.container{
+    width: 700px;
+    margin:auto;
+}
+.content{
+    background-color: white;
+    min-height: 300px;
+}
+.all{
+    width: 650px;
+    margin: auto;
+    padding-top: 33px;
+    padding-left:40px;
+}
+.flex{
+    display: flex;
+}
+.sizeText{
+    font-size: 16px;
+}
+.fontText{
+    font-family: sans-serif;
+}
+.fontBold{
+    font-weight: bold;
+}
+.warning{
+    padding-top: 40px;
+    padding-left: 40px;
+    color:red;
+}
+.colorText{
+    color:black;
+}
+.colorTitle{
+    color:#0000cc;
+}
+button{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+}
+input[type="submit"]{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+}
+input[type="text"], input[type="password"]{
+    background-color: #fff68f;
+}
+.mess{
+    color: red;
+    align-content: center;
+}

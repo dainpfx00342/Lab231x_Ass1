@@ -1,0 +1,30 @@
+.prev{
+    background-image: url("/images/top_box.gif");
+    width: 700px;
+    height: 19px;
+}
+.menu{
+    background-color: white;
+}
+.menu .mn{
+    width: 650px;
+    height: 51px;
+    background-image: url("/images/menu_bg.gif");
+    margin: 0 auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+li {
+    display: inline-block;
+}
+li a {
+    color: #595959;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}

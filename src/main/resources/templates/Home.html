@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/header.css" type="text/css"/>
+
+
+</head>
+<body>
+<div class="container">
+  <div th:insert="~{header :: header}"></div>
+  <div class="content">
+    <div class="all">
+      <div class="title">
+        <div class="fontBold sizeText">Home Page</div>
+      </div>
+      <!-- Hiển thị thông báo Welcome -->
+      <p>
+        <span style="color: black;">Welcome: </span>
+        <span style="color: blue;" th:text="${user}"></span>
+      </p>
+      <!-- Bảng thông tin người dùng -->
+      <table border="1" style="width: 50%; margin: 20px auto; text-align: left;">
+        <tr>
+          <th>Attribute</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td th:text="${user}"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td th:text="${email}"></td>
+        </tr>
+        <tr>
+          <td>Role</td>
+          <td th:text="${role}"></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td th:text="${password}"> </td>
+        </tr>
+      </table>
+
+      <a href="/login">Logout</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

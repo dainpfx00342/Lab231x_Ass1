@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+
+    <!-- Header Section -->
+    <div th:fragment="header">
+    <div class="prev" ></div>
+
+        <div class="menu">
+            <div class="mn">
+                <ul>
+                    <li><a class="fontBold fontText sizeText" href="Home">Home</a></li>
+                    <li><a class="fontBold fontText sizeText" href="takequiz">Take Quiz</a></li>
+                    <li><a class="fontBold fontText sizeText" href="makequiz">Make Quiz</a></li>
+                    <li><a class="fontBold fontText sizeText" href="managequiz">Manage Quiz</a></li>
+                    <!-- Add condition to show 'Logout' if logged in -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

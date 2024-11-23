@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+
+<!-- Login Form Section -->
+<div class="container">
+    <!-- Header Section -->
+    <div class="prev"></div>
+    <div class="menu">
+        <div class="mn">
+            <ul >
+                <li><a class="fontBold fontText sizeText" href="Home">Home</a></li>
+                <li><a class="fontBold fontText sizeText" href="takequiz">Take Quiz</a></li>
+                <li><a class="fontBold fontText sizeText" href="makequiz">Make Quiz</a></li>
+                <li><a class="fontBold fontText sizeText" href="managequiz">Manage Quiz</a></li>
+                <!--if logined => show logout-->
+
+            </ul>
+        </div>
+    </div>
+    <div class="content fontText sizeText ">
+        <div class="all">
+            <div class="title">
+                <div class="fontBold sizeText">Login Form</div>
+            </div>
+            <div class="lg">
+
+                <form action="/login" method="POST">
+                    <table>
+                        <tr>
+                            <td class="colorText">User Name:</td>
+                            <td><label>
+                                <input class="inputUser sizeText" type="text" name="username" value=""/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td class="colorText">Password:</td>
+                            <td><label>
+                                <input class="inputPass sizeText" type="password" name="password" value=""/>
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="buttonSubmit sizeText" type="submit" name="submit" value="Sign in"/>
+                                <a class="linkRegister colorText" href="register">Register</a></td>
+                        </tr>
+                    </table>
+
+                </form>
+                <!-- Hiển thị thông báo lỗi nếu có -->
+                <div th:if="${mess}" class="error-message" th:text="${mess}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
